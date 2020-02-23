@@ -1,0 +1,189 @@
+.contact-us {
+  padding: 53px 0 263px;
+  position: relative;
+
+  @include tablet {
+    padding: 20px 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include widescreen {
+      justify-content: center;
+    }
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 696px;
+    max-height: 936px;
+    background: url(../images/contact-us.png) center center no-repeat;
+    background-size: cover;
+    z-index: 0;
+
+    @include widescreen {
+      display: none;
+    }
+  }
+
+  &__info,
+  &__form {
+    position: relative;
+    z-index: 5;
+    background: white;
+
+    @include widescreen {
+      width: 50%;
+    }
+
+    @include tablet {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 580px;
+    margin-right: 155px;
+    border-bottom: solid 7px $color-primary;
+
+    @include widescreen {
+      margin-right: 50px;
+    }
+
+    @include tablet {
+      margin: 0 0 20px;
+      max-width: 100%;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $color-dark-grey-1;
+      margin-bottom: 18px;
+    }
+
+    .contacts-table {
+      padding: 31px 42px 45px;
+
+      &__row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .ico {
+          flex-shrink: 0;
+          width: 24px;
+          height: 24px;
+          margin-right: 30px;
+
+          a {
+            max-width: 100%;
+          }
+        }
+
+        .link {
+          padding-top: 5px;
+
+          a {
+            font-size: 18px;
+            line-height: 1em;
+            color: $color-dark-grey-1;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 540px;
+    padding: 56px 56px 48px;
+    box-shadow: -1px 12px 23px $color-box-shadow-secondary;
+
+    @include tablet {
+      box-shadow: none;
+      max-width: 100%;
+      padding: 0;
+    }
+
+    h5 {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 48px;
+    }
+
+    label,
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      line-height: 30px;
+      padding: 0 20px;
+
+      @include tablet {
+        padding: 10px;
+      }
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 8px;
+      padding: 0;
+    }
+
+    input {
+      &[type=text],
+      &[type=email] {
+        height: 72px;
+        margin-bottom: 32px;
+        border: solid 1px $color-grey-4;
+
+        @include tablet {
+          height: 40px;
+          margin-bottom: 20px
+        }
+      }
+
+      &[type=submit] {
+        @include tablet {
+          width: auto;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    textarea {
+      resize: none;
+      padding: 20px;
+      margin-bottom: 40px;
+      border: solid 1px $color-grey-4;
+      height: 144px;
+    }
+  }
+}

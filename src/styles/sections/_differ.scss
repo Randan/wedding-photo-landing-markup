@@ -1,0 +1,54 @@
+.differ {
+  padding: 140px 0;
+  position: relative;
+
+  @include desktop {
+    padding: 200px 0 20px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: url(../images/differ.png) center top no-repeat;
+    background-size: cover;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  .container {
+    padding-left: 29%;
+
+    @include desktop {
+      padding: 0 20px;
+    }
+  }
+
+  .info-wrapper {
+    position: relative;
+    z-index: 5;
+    padding: 64px 68px;
+    background: white;
+    box-shadow: -1px 12px 23px $color-box-shadow-secondary;
+
+    @include desktop {
+      padding: 20px;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    blockquote {
+      margin-bottom: 17px;
+    }
+  }
+}

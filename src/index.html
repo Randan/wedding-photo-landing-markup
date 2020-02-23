@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Apiko</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="src/images/logo.svg" alt="Apiko" />
+          </a>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">What We Offer?</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <div class="hero-info">
+          <div class="info-wrapper">
+            <h1>We catch your happy moments</h1>
+            <p>
+              By choosing our agency you will obtain unforgetable memories and
+              amazing experience. We will help you to make your dreams come
+              true!
+            </p>
+            <div class="links-wrapper">
+              <button class="btn btn--primary btn--big">Contact us</button>
+              <a href="#" class="facebook"></a>
+              <a href="#" class="instagram"></a>
+              <a href="#" class="youtube"></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slider">
+          <div class="img-wrapper">
+            <a
+              class="fancybox"
+              data-fancybox="gallery"
+              rel="group"
+              href="src/images/hero-1.png"
+            >
+              <img src="src/images/hero-1.png" alt="" />
+            </a>
+            <a
+              class="fancybox"
+              data-fancybox="gallery"
+              rel="group"
+              href="src/images/hero-1.png"
+            >
+              <img src="src/images/hero-1.png" alt="" />
+            </a>
+            <a
+              class="fancybox"
+              data-fancybox="gallery"
+              rel="group"
+              href="src/images/hero-1.png"
+            >
+              <img src="src/images/hero-1.png" alt="" />
+            </a>
+          </div>
+          <div class="hero-slider__nav">
+            <button class="slider-prev"></button>
+            <div class="slider-count">
+              <span class="current"></span>
+              <span class="divider">/</span>
+              <span class="total"></span>
+            </div>
+            <button class="slider-next"></button>
+            <button class="slider-zoom"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="differ">
+      <div class="container">
+        <div class="info-wrapper">
+          <h6>WEDDING PHOTO VIDEO</h6>
+          <h2>Why do we differ from others?</h2>
+          <blockquote>
+            <p>
+              On your wedding day, the photographer and cinematographer can
+              become interlopers to your day. We do things differently.
+            </p>
+            <p>
+              Your relationship and your wedding day are entirely unique. We are
+              there to blend so seamlessly in to the defining moments that you
+              are always at ease, always natural. The result is that we capture
+              the essence which makes your special day what it is in a
+              story-telling style. We feel honoured to fulfil this role. We care
+              deeply that we preserve a true and inspiring portrayal of your
+              day.
+            </p>
+          </blockquote>
+          <button class="btn btn--secondary btn--small">Check our blog</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer">
+      <div class="container">
+        <div class="info-wrapper">
+          <h2>What we offer</h2>
+          <div class="blockqoutes-wrapper">
+            <blockquote class="camera">
+              <h5>Modern Photo and Video</h5>
+              <p>
+                We offer high-quality video and photo in order to capture every
+                detail of your perfect wedding day.
+              </p>
+              <div class="link-youtube">
+                <a href="#">Check our Youtube</a>
+              </div>
+            </blockquote>
+
+            <blockquote class="drone">
+              <h5>Air-drone photography</h5>
+              <p>
+                Have you ever dreamed of having a breathtaking movi-like video?
+                Our professional photographers are highly skilled in using
+                air-drones
+              </p>
+            </blockquote>
+
+            <blockquote class="tap">
+              <h5>Professional retoushing</h5>
+              <p>
+                Our team provides you with brilliant photo editing in really
+                short terms. You'll get the amazing photos in the blink of your
+                eye.
+              </p>
+            </blockquote>
+
+            <blockquote class="video-camera">
+              <h5>Actual Equipment</h5>
+              <p>
+                Our main goal is to achieve the outstanding results. So we are
+                constantly in search of new updates of our equipment.
+              </p>
+            </blockquote>
+
+            <div class="wide-blockquote">
+              <blockquote class="smile">
+                <h5>Travel wedding photography</h5>
+                <p>
+                  We believe that your wedding is one of the most important days
+                  in your life, that's why our company will do our best to make
+                  it unforgetable and peculiar. Our team can organize an
+                  extraordinary ceremony for you. If case you do not know
+                  exactly what you want - why don't you consider choosing to
+                  make your wedding ceremony outside. You can choose any place
+                  you like - from the park in your city to the bank of the
+                  seaside.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn--primary btn--big">Contact us</button>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="container">
+        <h2>Portfolio</h2>
+
+        <div class="button-group filters-button-group">
+          <button class="button button-all is-checked" data-filter="*">
+            All <span class="amount">()</span>
+          </button>
+          <button class="button button-photo" data-filter=".mpicture">
+            Photo <span class="amount">()</span>
+          </button>
+          <button class="button button-video" data-filter=".mvideo">
+            Video <span class="amount">()</span>
+          </button>
+        </div>
+
+        <div class="masonry">
+          <div class="grid-item mvideo">
+            <img src="src/images/mv-1.png" alt="" />
+          </div>
+          <div class="grid-item mpicture">
+            <img src="src/images/mp-2.png" alt="" />
+          </div>
+          <div class="grid-item mvideo">
+            <img src="src/images/mv-2.png" alt="" />
+          </div>
+          <div class="grid-item minsta">
+            <div class="instabox">
+              <img src="src/images/instagram-colored.png" alt="" />
+              <p>Follow us on Instagram</p>
+              <button class="btn btn--secondary btn--small">
+                Got to Instagram
+              </button>
+            </div>
+          </div>
+          <div class="grid-item mpicture">
+            <img src="src/images/mp-1.png" alt="" />
+          </div>
+          <div class="grid-item mpicture">
+            <img src="src/images/mp-4.png" alt="" />
+          </div>
+          <div class="grid-item mpicture">
+            <img src="src/images/mp-3.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonials__carousel">
+          <div class="testimonial-item">
+            <div class="big-photo">
+              <img src="src/images/testimanial1.png" alt="" />
+            </div>
+            <div class="text-content">
+              <img src="src/images/users1.png" alt="" />
+              <div class="names">Tania + Mike</div>
+              <div class="date">23/02/2019</div>
+              <div class="text">
+                We didn't expect such amazing resuls. We found Apiko by our
+                friend’s recomendation and are completely satisfied now.
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="big-photo">
+              <img src="src/images/testimanial2.png" alt="" />
+            </div>
+            <div class="text-content">
+              <img src="src/images/users2.png" alt="" />
+              <div class="names">Angelina + John</div>
+              <div class="date">23/02/2019</div>
+              <div class="text">
+                Thank you Apiko and whole team for such amazing result, I am
+                really happy to have such brilliant memories about that amazing
+                day!
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="big-photo">
+              <img src="src/images/testimanial3.png" alt="" />
+            </div>
+            <div class="text-content">
+              <img src="src/images/users3.png" alt="" />
+              <div class="names">Jenifer + Elton</div>
+              <div class="date">23/02/2019</div>
+              <div class="text">
+                Apiko made my dream come true, when I received photos and video
+                from my wedding I said "WOW", that was like Hollywood movie!
+                Highly recomend!
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="big-photo">
+              <img src="src/images/testimanial1.png" alt="" />
+            </div>
+            <div class="text-content">
+              <img src="src/images/users1.png" alt="" />
+              <div class="names">Tania + Mike</div>
+              <div class="date">23/02/2019</div>
+              <div class="text">
+                We didn't expect such amazing resuls. We found Apiko by our
+                friend’s recomendation and are completely satisfied now.
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="big-photo">
+              <img src="src/images/testimanial2.png" alt="" />
+            </div>
+            <div class="text-content">
+              <img src="src/images/users2.png" alt="" />
+              <div class="names">Angelina + John</div>
+              <div class="date">23/02/2019</div>
+              <div class="text">
+                Thank you Apiko and whole team for such amazing result, I am
+                really happy to have such brilliant memories about that amazing
+                day!
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="big-photo">
+              <img src="src/images/testimanial3.png" alt="" />
+            </div>
+            <div class="text-content">
+              <img src="src/images/users3.png" alt="" />
+              <div class="names">Jenifer + Elton</div>
+              <div class="date">23/02/2019</div>
+              <div class="text">
+                Apiko made my dream come true, when I received photos and video
+                from my wedding I said "WOW", that was like Hollywood movie!
+                Highly recomend!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__nav">
+          <button class="slider-prev"></button>
+          <div class="slider-count">
+            <span class="current"></span>
+            <span class="divider">/</span>
+            <span class="total"></span>
+          </div>
+          <button class="slider-next"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us">
+      <div class="container">
+        <div class="contact-us__info">
+          <h3>Please contact us</h3>
+          <p>We appreciate every client and can make your dreams come true! Do not hesitate to contact us.</p>
+          <div class="contacts-table">
+            <div class="contacts-table__row">
+              <div class="ico">
+                <img src="src/images/location.png" alt="">
+              </div>
+              <div class="link">
+                <a href="#">385 Noah Place Suite 878</a>
+              </div>
+            </div>
+            <div class="contacts-table__row">
+              <div class="ico">
+                <img src="src/images/phone.png" alt="">
+              </div>
+              <div class="link">
+                <a href="#">877-255-7945</a>
+              </div>
+            </div>
+            <div class="contacts-table__row">
+              <div class="ico">
+                <img src="src/images/mail.png" alt="">
+              </div>
+              <div class="link">
+                <a href="#">info@form.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-us__form">
+          <h5>SEND US MESSAGE</h5>
+          <form action="">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Your Name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your Email">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="Your Message"></textarea>
+            <input type="submit" class="btn btn--primary btn--big" value="Submit">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe">
+      <div class="container">
+        <div class="form-wrapper">
+          <h4>Subscribe for updates</h4>
+          <form action="">
+            <input
+              type="email"
+              name="subscribe"
+              id="subscribe"
+              placeholder="Your Email"
+            />
+            <input
+              type="submit"
+              value="SUBSCRIBE"
+              class="btn btn--primary btn--small"
+            />
+          </form>
+          <p>
+            We value your privacy. None of the details supplied will be shared
+            with external parties
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="top-wrapper">
+          <div class="logo">
+            <a href="/">
+              <img src="src/images/logo-footer.svg" alt="Apiko" />
+            </a>
+          </div>
+          <nav class="footer-nav">
+            <ul>
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">What We Offer?</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Testimonials</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bottom-wrapper">
+          <div class="copyright">2019 © Apiko. All rights reserved.</div>
+          <div class="social">
+            <a href="#" class="facebook"></a>
+            <a href="#" class="instagram"></a>
+            <a href="#" class="youtube"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

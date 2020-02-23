@@ -1,0 +1,133 @@
+.portfolio {
+  padding: 75px 0 92px;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    max-width: 470px;
+    background: $color-grey-3;
+    padding: 4px;
+    border-radius: 5px;
+    margin: 0 auto 45px;
+
+    .button {
+      display: block;
+      width: 33.33%;
+      height: 51px;
+      background: transparent;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      line-height: 20px;
+      color: black;
+      text-transform: uppercase;
+
+      &.is-checked {
+        background: white;
+        box-shadow: 5px 0px 10px $color-box-shadow-secondary;
+      }
+
+      span {
+        color: $color-grey-2;
+      }
+    }
+  }
+
+  .masonry {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .grid-item {
+      margin-bottom: 4px;
+      float: left;
+      width: calc(25% - 4px);
+
+      @include widescreen {
+        width: calc(33.33% - 4px);
+      }
+
+      @include tablet {
+        width: calc(50% - 4px);
+      }
+
+      @include phone {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .mvideo {
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 82px;
+        height: 82px;
+        background: url(../images/play.svg) center center no-repeat;
+      }
+    }
+
+    .minsta {
+      background: url(../images/mi-1.png) center center no-repeat;
+      background-size: cover;
+      height: 100%;
+
+      @include widescreen {
+        height: 280px;
+      }
+
+      .instabox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        width: 230px;
+        padding: 32px 20px;
+        background: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          margin-bottom: 20px;
+          width: auto;
+          height: auto;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 21px;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .btn {
+          width: 155px;
+          height: 43px;
+          border-color: black;
+          color: black;
+          font-size: 15px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

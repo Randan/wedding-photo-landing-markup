@@ -1,0 +1,184 @@
+.offer {
+  padding: 60px 0 10px;
+  position: relative;
+
+  @include desktop {
+    padding: 20px 0;
+  }
+
+  @include tablet {
+    padding: 0 0 20px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    background: url(../images/offer.png) center center no-repeat;
+    background-size: cover;
+
+    @include tablet {
+      width: 100%;
+      position: static;
+      height: 370px;
+    }
+  }
+
+  .info-wrapper {
+    width: 50%;
+    position: relative;
+    z-index: 5;
+    padding: 60px 0;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 55px;
+      text-align: center;
+    }
+
+    .blockqoutes-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 45px 0 60px;
+
+      @include widescreen {
+        display: block;
+        padding: 0 20px;
+      }
+
+      blockquote {
+        width: 50%;
+        margin-bottom: 65px;
+        padding-left: 35px;
+        position: relative;
+
+        @include widescreen {
+          width: 100%;
+          margin-bottom: 25px;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          z-index: 5;
+          top: 0;
+          left: 0;
+          transform: translateX(-50%);
+          background: {
+            color: white;
+            repeat: no-repeat;
+            position: center center;
+          }
+        }
+
+        &.camera:before {
+          background-image: url(../images/camera.svg);
+        }
+
+        &.drone:before {
+          background-image: url(../images/drone.svg);
+        }
+
+        &.tap:before {
+          background-image: url(../images/tap.svg);
+        }
+
+        &.video-camera:before {
+          background-image: url(../images/video-camera.svg);
+        }
+
+        &.smile:before {
+          background-image: url(../images/smile.svg);
+        }
+
+        h5 {
+          padding-top: 10px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          text-indent: 0;
+          font-size: 16px;
+          line-height: 26px;
+        }
+
+        .link-youtube {
+          display: flex;
+          align-items: center;
+
+          &:before {
+            content: "";
+            width: 26px;
+            height: 18px;
+            margin-right: 12px;
+            background: url(../images/youtube-green.svg) center center no-repeat;
+          }
+
+          a {
+            color: $color-primary;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .wide-blockquote {
+        position: relative;
+
+        &:before {
+          content: "";
+          background: white;
+          border-bottom: solid 7px $color-primary;
+          box-shadow: -1px 12px 23px $color-box-shadow-secondary;
+          position: absolute;
+          top: 0;
+          bottom: -32px;
+          left: -60px;
+          right: -80px;
+
+          @include widescreen {
+            display: none;
+          }
+        }
+
+        blockquote {
+          width: 100%;
+          margin-bottom: 0;
+          padding-bottom: 0;
+
+          &:before {
+            width: 54px;
+            height: 54px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            @include widescreen {
+              top: 0;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+}

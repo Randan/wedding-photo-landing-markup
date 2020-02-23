@@ -1,0 +1,197 @@
+.hero {
+  position: relative;
+  height: 100vh;
+
+  @include desktop {
+    height: auto;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  &-info,
+  &-slider {
+    width: 50%;
+
+    @include desktop {
+      width: 100%;
+    }
+
+    &__nav {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      background: $color-primary;
+      color: white;
+      height: 68px;
+      padding: 17px;
+
+      .slider-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 8px;
+        font-family: $font-secondary;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      button {
+        display: block;
+        width: 33px;
+        height: 33px;
+        border: solid 1px white;
+        background: {
+          repeat: no-repeat;
+          position: center center;
+          color: transparent;
+        }
+
+        &.slider-prev {
+          background-image: url(../images/arrow-prev.svg);
+        }
+        &.slider-next {
+          background-image: url(../images/arrow-next.svg);
+        }
+        &.slider-zoom {
+          background-image: url(../images/zoom.svg);
+          border: none;
+          margin-left: 27px;
+        }
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px 0 85px;
+
+    @include widescreen {
+      padding: 0;
+    }
+
+    .info-wrapper {
+      max-width: 485px;
+
+      @include desktop {
+        margin: 0 auto 20px;
+      }
+
+      p {
+        font-weight: bold;
+        margin-bottom: 59px;
+
+        @include desktop {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+      }
+
+      .links-wrapper {
+        display: flex;
+        align-items: center;
+
+        @include desktop {
+          display: block;
+          text-align: center;
+        }
+
+        .btn {
+          margin-right: 24px;
+
+          @include desktop {
+            display: block;
+            margin: 0 auto 20px;
+          }
+        }
+
+        a {
+          display: block;
+          width: 34px;
+          height: 25px;
+          margin: 0 14px;
+          text-decoration: none;
+
+          &.facebook,
+          &.instagram,
+          &.youtube {
+            background: {
+              position: center center;
+              repeat: no-repeat;
+              color: transparent;
+              size: contain;
+            }
+
+            @include desktop {
+              display: inline-block;
+            }
+          }
+
+          &.facebook {
+            background-image: url(../images/facebook.svg);
+          }
+          &.instagram {
+            background-image: url(../images/instagram.svg);
+          }
+          &.youtube {
+            background-image: url(../images/youtube.svg);
+          }
+        }
+      }
+    }
+  }
+
+  &-slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+
+    @include desktop {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+      margin-left: calc(-100vw / 2 + 100% / 2);
+      margin-right: calc(-100vw / 2 + 100% / 2);
+      width: 100vw;
+    }
+
+    .img-wrapper {
+      height: 100%;
+    }
+  }
+
+  .slick {
+    &-arrow {
+      display: none !important;
+    }
+
+    &-slide {
+      a.fancybox {
+        display: block !important;
+        height: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 100vh;
+        object: {
+          fit: cover;
+          position: center center;
+        }
+
+        @include desktop {
+          height: auto;
+        }
+      }
+    }
+  }
+}

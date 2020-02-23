@@ -1,0 +1,47 @@
+// colors
+$color-primary: #13AA57;
+$color-primary-selection: rgba(19, 170, 87, .5);
+$color-grey: #bdbdbd;
+$color-grey-2: #C4C4C4;
+$color-grey-3: #EEE;
+$color-grey-4: #333;
+$color-grey-5: #8e8e8e;
+$color-dark-grey-1: #263238;
+$color-dark-grey-2: #212121;
+$color-box-shadow-primary: rgba(19, 170, 87, .3);
+$color-box-shadow-secondary: rgba(0, 0, 0, .1);
+
+// font-families
+$font-primary: 'Chivo', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;;
+
+// breakpoints variables
+$bp-widescreen: 1440px;
+$bp-desktop: 1024px;
+$bp-tablet: 768px;
+$bp-phone: 320px;
+
+// breakpoint mixins
+@mixin widescreen {
+  @media (max-width: #{$bp-widescreen}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$bp-desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$bp-phone}) {
+    @content;
+  }
+}

@@ -1,0 +1,101 @@
+.header {
+  padding: 22px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+
+  @include widescreen {
+    position: static;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    flex-shrink: 0;
+    margin-right: 45px;
+
+    @include desktop {
+      margin-right: 25px;
+    }
+
+    @include tablet {
+      margin: 0 0 10px;
+    }
+
+    a {
+      display: block;
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  &-nav {
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      @include tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      li {
+        display: block;
+        padding: 0 26px;
+
+        @include desktop {
+          padding: 0 10px;
+        }
+
+        a {
+          font-size: 16px;
+          line-height: 19px;
+          color: black;
+          text-decoration: none;
+
+          @include desktop {
+            font-size: 14px;
+            line-height: 15px;
+          }
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+
+        &.active {
+          a {
+            color: $color-primary;
+            position: relative;
+
+            &:after {
+              content: "";
+              display: block;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: $color-primary;
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              transform: translate(-50%, 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

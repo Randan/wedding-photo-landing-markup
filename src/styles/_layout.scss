@@ -1,0 +1,46 @@
+html, body {
+  position: relative;
+}
+
+.container {
+  max-width: 1640px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+
+  &--big {
+    min-width: 240px;
+    height: 80px;
+    font-size: 30px;
+    line-height: 53px;
+  }
+
+  &--small {
+    min-width: 155px;
+    height: 43px;
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  &--primary {
+    color: white;
+    background: $color-primary;
+    box-shadow: 0 21px 33px $color-box-shadow-primary;
+  }
+
+  &--secondary {
+    background: white;
+    border: solid 1px $color-primary;
+    color: $color-primary;
+  }
+}
+
+.alignfull {
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+}

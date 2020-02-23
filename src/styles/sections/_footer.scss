@@ -1,0 +1,129 @@
+.footer {
+  background: $color-dark-grey-2;
+  padding: 63px 0 25px;
+
+  @include widescreen {
+    padding: 20px 0;
+  }
+
+  .top-wrapper,
+  .bottom-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .top-wrapper {
+    margin-bottom: 64px;
+
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      margin: 0;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &-nav {
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      opacity: .4;
+
+      @include tablet {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      li {
+        display: block;
+        padding: 0 0 0 45px;
+
+        @include desktop {
+          padding: 0 10px;
+        }
+
+        a {
+          font-size: 16px;
+          line-height: 26px;
+          letter-spacing: 0.05em;
+          color: white;
+          text-decoration: none;
+
+          @include desktop {
+            font-size: 14px;
+            line-height: 15px;
+          }
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-wrapper {
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+
+    .copyright {
+      font-size: 16px;
+      line-height: 26px;
+      opacity: .3;
+      color: white;
+    }
+
+    .social {
+      display: flex;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
+
+      a {
+        display: block;
+        width: 34px;
+        height: 25px;
+        margin: 0 0 0 24px;
+        text-decoration: none;
+        opacity: .4;
+
+        @include tablet {
+          margin: 0 10px;
+        }
+
+        &.facebook,
+        &.instagram,
+        &.youtube {
+          background: {
+            position: center center;
+            repeat: no-repeat;
+            color: transparent;
+            size: contain;
+          }
+        }
+
+        &.facebook {
+          background-image: url(../images/facebook.svg);
+        }
+        &.instagram {
+          background-image: url(../images/instagram.svg);
+        }
+        &.youtube {
+          background-image: url(../images/youtube.svg);
+        }
+      }
+    }
+  }
+}
